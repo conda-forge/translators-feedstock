@@ -1,5 +1,5 @@
 {% set name = "translators" %}
-{% set version = "5.4.6" %}
+{% set version = "5.4.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/translators-{{ version }}.tar.gz
-  sha256: 3a13f74e0d448003301776e971744d0bc8094ea32fd17ad2c0072c8dde1d116b
+  sha256: 4043e599d0b8600c99d006a6178294cc86a3fb68f30f48b469d092118c41b82f
 
 build:
   noarch: python
@@ -24,6 +24,7 @@ requirements:
     - pyexecjs >=1.5.1
     - lxml >=4.9.1
     - pathos >=0.2.9
+    - cryptography >=38.0.1
 
 test:
   imports:
