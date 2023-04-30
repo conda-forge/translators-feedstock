@@ -1,11 +1,11 @@
-About translators
-=================
+About translators-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/translators-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/uliontse/translators
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/translators-feedstock/blob/main/LICENSE.txt)
 
 Summary: Translators is a library which aims to bring free, multiple, enjoyable translation to individuals and students in Python.
 
