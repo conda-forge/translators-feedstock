@@ -1,5 +1,5 @@
 {% set name = "translators" %}
-{% set version = "5.7.0" %}
+{% set version = "5.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/translators-{{ version }}.tar.gz
-  sha256: 5896d25ad0aa21f884c5d3eb3363092aee14d5c356de6b85c3e4393a7c2d35be
+  sha256: d4209a8bd3dbcc4e766db389dc5cc4d84a52b150cbd78970ef3a82ba5e52497f
 
 build:
   noarch: python
