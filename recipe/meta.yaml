@@ -39,7 +39,7 @@ about:
   home: https://github.com/uliontse/translators
   summary: Translators is a library which aims to bring free, multiple, enjoyable translation to individuals and students in Python.
   dev_url: https://github.com/UlionTse/translators
-  license: GPLv3
+  license: GPL-3.0-only
   license_file: LICENSE
 
 extra:
