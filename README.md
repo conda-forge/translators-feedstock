@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/translators-fee
 
 Home: https://github.com/UlionTse/translators
 
-Package license: [GPL-3.0-only](https://github.com/UlionTse/translators/blob/master/LICENSE)
+Package license: GPL-3.0-only
 
 Summary: Translators is a library which aims to bring free, multiple, enjoyable translation to individuals and students in Python.
 
