@@ -20,12 +20,14 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - requests >=2.29.0
+    - httpx >=0.28.1
+    - requests >=2.32.3
+    - niquests >=3.12.3
     - pyexecjs >=1.5.1
-    - lxml >=4.9.1
-    - tqdm >=4.65.0
-    - pathos >=0.2.9
-    - cryptography >=38.0.1
+    - lxml >=5.3.0
+    - tqdm >=4.67.1
+    - pathos >=0.3.3
+    - cryptography >=42.0.8
 
 test:
   imports:
