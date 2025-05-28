@@ -1,5 +1,5 @@
 {% set name = "translators" %}
-{% set version = "5.9.9" %}
+{% set version = "6.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,20 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/translators-{{ version }}.tar.gz
-  sha256: d5a76654e8cf2d71d2fdf768fbf40576d22686cb7877876c1fd6054e61cc2d6d
+  sha256: 79962830fce5314810f7266e7c6555c4387883ee12d86072e14a03c1bb3707a8
 
 build:
+  entry_points:
+    - fanyi = translators.cli:translate_cli
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools
+    - wheel
     - pip
   run:
     - python >={{ python_min }}
@@ -34,6 +38,7 @@ test:
     - translators
   commands:
     - pip check
+    - fanyi --help
   requires:
     - pip
     - python {{ python_min }}
