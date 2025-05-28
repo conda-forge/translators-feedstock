@@ -10,30 +10,35 @@ source:
   sha256: 2d2faad102785b3c4e6c12e3a1d18310449c8d257b668e3df463a52bbb5bdce2
 
 build:
+  entry_points:
+    - fanyi = translators.cli:translate_cli
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools
+    - wheel
     - pip
   run:
     - python >={{ python_min }}
     - httpx >=0.28.1
     - requests >=2.32.3
-    - niquests >=3.8.0
-    - pyexecjs >=1.5.1
+    - niquests >=3.14.0
+    - exejs >=0.0.4
     - lxml >=5.3.0
     - tqdm >=4.67.1
-    - pathos >=0.3.3
-    - cryptography >=42.0.8
+    - pathos >=0.3.4
+    - cryptography >=42.0.4
 
 test:
   imports:
     - translators
   commands:
     - pip check
+    - fanyi --help
   requires:
     - pip
     - python {{ python_min }}
